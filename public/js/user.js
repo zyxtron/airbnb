@@ -4,8 +4,8 @@ function updateUser(id) {
   const floor = parseInt(floorEl.value)
   const emailEl = document.getElementById('emailCheckbox')
   const wantEmail = emailEl.checked
-  if (floorEl.value !== '' && (floor < 3 || floor > 18)) {
-    displayMessage('A szint üres vagy 3 és 18 közötti szám lehet')
+  if (floorEl.value !== '' && (floor < 1 || floor > 4)) {
+    displayMessage('Az ágy üres vagy 1 és 4 közötti szám lehet')
   } else {
     fetch(`/users/${id}`, {
       method: 'PATCH',

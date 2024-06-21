@@ -68,8 +68,8 @@ const validateGroup = (data) => {
     errors.push('A név kitöltése kötelező')
   }
 
-  if (meetingPlace === 'floor' && (typeof room !== 'number' || room < 3 || room > 18)) {
-    errors.push('A szint csak 3 és 18 közötti szám lehet')
+  if (meetingPlace === 'floor' && (typeof room !== 'number' || room < 1 || room > 4)) {
+    errors.push('Az ágy csak 1 és 4 közötti szám lehet')
   }
 
   if (meetingPlace === 'link') {
@@ -79,7 +79,7 @@ const validateGroup = (data) => {
     if (!isValidHttpsUrl(link)) {
       errors.push('Hibás link')
       errors.push('A linknek így kell kinéznie: https://valami.valami)')
-      errors.push('Pl: https://tanulo.sch.bme.hu')
+      errors.push('Pl: https://airbnb.sch.bme.hu')
     }
   }
 

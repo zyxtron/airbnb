@@ -12,7 +12,7 @@ export const index = asyncWrapper(async (req: Request, res: Response) => {
 })
 
 const show = asyncWrapper(async (req: Request, res: Response) => {
-  if (+req.params.id <= 18 && +req.params.id >= 3) {
+  if (+req.params.id <= 4 && +req.params.id >= 1) {
     res.render('room/calendar', { room: req.params.id, ROOMS })
   } else {
     res.redirect('/not-found')

@@ -37,8 +37,8 @@ function validateTicket(data) {
   const room = parseInt(data.get('roomNumber'))
   const description = data.get('description')
 
-  if (typeof room !== 'number' || room < 3 || room > 18) {
-    errors.push('A szint csak 3 és 18 közötti szám lehet')
+  if (typeof room !== 'number' || room < 1 || room > 4) {
+    errors.push('Az ágy csak 1 és 4 közötti szám lehet')
   }
   if (!description) {
     errors.push('A leírás nem lehet üres')

@@ -1,6 +1,6 @@
 header(x-data="{ open: false }")
   nav(class='flex flex-row items-center justify-between px-6 py-4 text-xl')
-    a(href='/' class='text-xl font-bold nav-link') TanulóSCH
+    a(href='/' class='text-xl font-bold nav-link') AirbnbSCH
     div(class='flex flex-row items-center space-x-6')
       a(onclick='changeTheme()' aria-label="Sötét mód váltása" class='cursor-pointer nav-link md:hidden')
         //- Heroicon name: sun
@@ -40,7 +40,7 @@ header(x-data="{ open: false }")
             path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z')
         a(href='/' class='nav-link') Kezdőlap
         a(href='/groups' class='nav-link') Csoportok
-        a(href='/tickets' class='nav-link') Hibajegyek
+        //- a(href='/tickets' class='nav-link') Hibajegyek
         if !loggedIn
           a(href='/auth/oauth' class='btn btn-primary animate-hover')
             strong Bejelentkezés

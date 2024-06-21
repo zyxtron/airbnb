@@ -41,8 +41,8 @@ router.patch('/:id',
   },
   check('floor')
     .optional({ nullable: true })
-    .isInt({ gt: 2, lt: 19 })
-    .withMessage('A szint csak üres vagy 3 és 18 közötti szám lehet'),
+    .isInt({ gt: 0, lt: 5 })
+    .withMessage('Az ágy csak üres vagy 1 és 4 közötti szám lehet'),
   handleValidationError(400),
   isSameUser,
   updateUser,

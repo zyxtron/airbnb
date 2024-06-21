@@ -132,8 +132,8 @@ export const createICSEvent = (req: Request, res: Response): void => {
       endDate.getHours(),
       endDate.getMinutes()
     ],
-    location: `SCH ${group.room.toString()}. emeleti tanuló`,
-    url: `https://tanulo.sch.bme.hu/groups/${group.id}`,
+    location: `AirbnbSCH ${group.room.toString()}. ágy`,
+    url: `https://airbnb.sch.bme.hu/groups/${group.id}`,
     categories: group.tags ? group.tags.split(',') : null
   }
 
@@ -191,9 +191,9 @@ export const validateGroup = (): ValidationChain[] => {
       .withMessage('A címkék egyenként max 30 karakter hosszúak lehetnek'),
     check()
       .custom((value) => (value.type !== 'floor' || value.room))
-      .withMessage('A szint nem lehet üres')
+      .withMessage('Az ágy nem lehet üres')
       .custom((value) => (value.type !== 'floor' || !(value.room < 3 || value.room > 18)))
-      .withMessage('A szint csak 3 és 18 közötti értéket vehet fel')
+      .withMessage('Az ágy csak 3 és 18 közötti értéket vehet fel')
       .custom((value) => (value.type !== 'link' || value.link))
       .withMessage('A link megadása kötelező')
       .custom((value) => (value.type !== 'link' || value.link.length <= 100))

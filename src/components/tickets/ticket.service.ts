@@ -52,8 +52,8 @@ export const sendEmailToTicketAdmins = asyncWrapper(
       .where({ role: RoleType.TICKET_ADMIN })
       .whereNotNull('email')
     sendEmail(emailRecepients, {
-      subject: `Új hibajegyet vettek fel a ${ticket.roomNumber}. emeleti tanulószobába!`,
-      body: `Új hibajegyet vettek fel a ${ticket.roomNumber}. emeleti tanulószobába!
+      subject: `Új hibajegyet vettek fel a ${ticket.roomNumber}. ágyra!`,
+      body: `Új hibajegyet vettek fel a ${ticket.roomNumber}. ágyra!
        A hibajegy tartalma: "${ticket.description}"`,
       link: '/tickets',
       linkTitle: 'Hibajegy megtekintése'

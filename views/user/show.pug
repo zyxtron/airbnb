@@ -7,9 +7,9 @@ block content
       div
         h2(class='mb-2 text-lg') Személyes beállítások
         div(class="flex flex-col")
-          label(for="floor-input" class='') Szint
-          input(id="floor-input", type="number", min="3", max="18", placeholder="Szint", title="Szint", value=user.floor, class='w-1/2 rounded-md form-element sm:w-1/4')
-        p(class='text-sm') Ha megadod a szinted, a főoldalon kiemelt helyen lesz
+          label(for="floor-input" class='') Ágy
+          input(id="floor-input", type="number", min="1", max="4", placeholder="Ágy", title="Ágy", value=user.floor, class='w-1/2 rounded-md form-element sm:w-1/4')
+        p(class='text-sm') Ha megadod az ágyad, a főoldalon kiemelt helyen lesz
       div(class="space-x-2")
         input(type="checkbox" class="rounded" checked=user.wantEmail id="emailCheckbox" name="emailCheckbox")
         label(for="emailCheckbox") Email értesítések

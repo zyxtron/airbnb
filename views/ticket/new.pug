@@ -8,7 +8,7 @@ block content
   div(class='flex flex-col items-center justify-center sm:px-4')
     form(id="ticket-form" class='flex flex-col max-w-6xl p-3 mx-4 my-4 space-y-4 sm:w-full sm:p-6 rounded-2xl bg-default shadow-full')
       div
-        label(for="roomNumber" class='block text-lg font-bold') Szint
+        label(for="roomNumber" class='block text-lg font-bold') Ágy
         select(name="roomNumber", id="roomNumber", class='rounded form-element')
           each room in ROOMS
             option(value=`${room}`)= room

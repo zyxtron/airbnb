@@ -3,10 +3,10 @@ extends ../layouts/main
 include roomTemplate.pug
 
 block content
-  h1(class='title') Tanulószobák
+  h1(class='title') Ágyak
   div(class='px-6 pt-3 xl:mx-52')
     div(class='grid grid-cols-1 lg:grid-cols-2 gap-y-8 gap-x-8')
-      if user && user.floor && user.floor >= 3 && user.floor <= 18
+      if user && user.floor && user.floor >= 1 && user.floor <= 4
         div(class='pt-3')
           if busyRooms.some(it => it.room === user.floor)
             - const group = busyRooms.find(it => it.room === user.floor)

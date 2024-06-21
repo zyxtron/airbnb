@@ -47,8 +47,8 @@ router.post('/',
   multer().none(),
   [
     check('roomNumber')
-      .notEmpty()              .withMessage('A szint nem lehet üres')
-      .isInt({ gt: 2, lt: 19 }).withMessage('A szint csak 3 és 18 közötti értéket vehet fel'),
+      .notEmpty()              .withMessage('Az ágy nem lehet üres')
+      .isInt({ gt: 2, lt: 19 }).withMessage('Az ágy csak 1 és 4 közötti értéket vehet fel'),
     check('description')
       .notEmpty()              .withMessage('A leírás nem lehet üres')
       .isLength({ max: 500 })  .withMessage('A leírás max 500 karakter lehet')
