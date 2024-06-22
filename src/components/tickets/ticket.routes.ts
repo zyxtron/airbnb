@@ -48,7 +48,7 @@ router.post('/',
   [
     check('roomNumber')
       .notEmpty()              .withMessage('Az ágy nem lehet üres')
-      .isInt({ gt: 2, lt: 19 }).withMessage('Az ágy csak 1 és 4 közötti értéket vehet fel'),
+      .isInt({ gt: 0, lt: 4 }) .withMessage('Az ágy csak 1 és 4 közötti értéket vehet fel'),
     check('description')
       .notEmpty()              .withMessage('A leírás nem lehet üres')
       .isLength({ max: 500 })  .withMessage('A leírás max 500 karakter lehet')
