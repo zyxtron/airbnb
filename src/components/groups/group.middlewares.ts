@@ -210,9 +210,6 @@ export const validateGroup = (): ValidationChain[] => {
       .withMessage('Múltbéli kezdéssel csoport nem hozható létre')
       .custom((value, { req }) => new Date(value).getTime() < new Date(req.body.endDate).getTime())
       .withMessage('A kezdés nem lehet korábban, mint a befejezés')
-      .custom((value, { req }) =>
-        differenceInMinutes(new Date(req.body.endDate), new Date(value)) <= 5*60)
-      .withMessage('A foglalás időtartama nem lehet hosszabb 5 óránál'),
     check('endDate', 'A befejezés időpontja kötelező')
       .exists({ checkFalsy: true, checkNull: true }),
     check('description', 'A leírás max 500 karakter lehet')
